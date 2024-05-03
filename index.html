@@ -10,7 +10,7 @@
     <h1>Bölüm 4</h1>
     <p>Üçüncü bölüm bitti. Yeni bir soruya kafa yorma zamanı.</p>
     <p>Soru: Teoride baykuşları sonsuza kadar uyutmamıza yarayacak eşya nedir?</p>
-    <form action="Part5.html" method="post" id="form2">
+    <form id="form2">
         <label for="password">Cevabi yazin:</label>
         <input type="password" id="password" name="password">
         <input type="submit" value="Next Episode">
@@ -20,14 +20,13 @@
         <p>Copyright © 2024 IMAGINE. All rights reserved.</p>
     </footer>
     <script>
-        document.getElementById("form2").onsubmit = function() {
+        document.getElementById("form2").onsubmit = function(event) {
+            event.preventDefault();
             var password = document.getElementById("password").value;
-            if (password === "GECE GÖZLÜĞÜ") {
-                window.location.href = "https://www.akjaeah.github.io/p-x-3";
-                return true;
+            if (password.toUpperCase() === "GECE GÖZLÜĞÜ") {
+                window.location.href = "https://akjaeah.github.io/f-z-6/";
             } else {
-                alert("Yanliş kod. Bence daha iyi düşünmelisin");
-                return false;
+                alert("Yanlış kod. Bence daha iyi düşünmelisin!");
             }
         };
     </script>
